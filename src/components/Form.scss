@@ -1,0 +1,103 @@
+$form-bg-color: #f9f9f9;
+$form-border-color: #ddd;
+$form-border-radius: 8px;
+$form-padding: 20px;
+$form-font-family: 'Arial, sans-serif';
+$form-primary-color: #4caf50;
+$form-secondary-color: #333;
+$form-error-color: #ff4d4d;
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: $form-bg-color;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  padding: $form-padding;
+  font-family: $form-font-family;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: $form-primary-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    label {
+      font-weight: bold;
+      color: $form-secondary-color;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border: 1px solid $form-border-color;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: $form-primary-color;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 80px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: $form-primary-color;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($form-primary-color, 10%);
+      }
+    }
+  }
+
+  .error {
+    color: $form-error-color;
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  .submitted-data {
+    margin-top: 20px;
+    padding: $form-padding;
+    border: 1px solid $form-border-color;
+    border-radius: $form-border-radius;
+    background-color: lighten($form-primary-color, 40%);
+    font-size: 16px;
+
+    h2 {
+      margin-bottom: 10px;
+      color: $form-secondary-color;
+    }
+
+    p {
+      margin: 5px 0;
+      color: $form-secondary-color;
+
+      &:last-child {
+        font-weight: bold;
+      }
+    }
+  }
+}
